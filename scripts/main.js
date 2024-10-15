@@ -1,3 +1,5 @@
+// Navbar
+
 function Menu(e) {
     let list = document.querySelector('ul');
     if (e.name === 'menu') {
@@ -11,3 +13,19 @@ function Menu(e) {
     }
   }
   
+
+  console.log("Fetch Book start")
+// Fetch Books API
+fetch('https://gutendex.com/books')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => { 
+    console.log(data.results);
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
