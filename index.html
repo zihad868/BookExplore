@@ -44,14 +44,22 @@
 
       <!-- Books Card -->
       <section>
-        <div>
-          
+        <div
+          id="books-container"
+          class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <!-- Responsive Books Card -->
         </div>
       </section>
     </main>
 
     <!-- Footer Section  -->
     <footer></footer>
+
+
+    <div id="loading" class="flex justify-center items-center my-10 hidden">
+      <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-cyan-500"></div>
+    </div>
 
     <script src="./scripts/main.js"></script>
   </body>
