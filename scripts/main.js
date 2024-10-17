@@ -17,8 +17,10 @@ function Menu(e) {
  
 // Fetch Books API
 
-// Fetch Books API
-function fetchBooks() {
+
+let page = 1;
+
+function fetchBooks(page) {
   const loadingElement = document.getElementById('loading');
   const booksContainer = document.getElementById('books-container');
 
@@ -26,7 +28,7 @@ function fetchBooks() {
   loadingElement.classList.remove('hidden');
   booksContainer.innerHTML = ''; // Clear any previous data
 
-  fetch('https://gutendex.com/books')
+  fetch(`https://gutendex.com/books?page=${page}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -45,10 +47,12 @@ function fetchBooks() {
     });
 }
 
+
 // Display Books
 function displayBooks(books) {
   const booksContainer = document.getElementById('books-container');
   
+
   books.forEach(book => {
     // Create a card for each book
     const bookCard = `
@@ -67,5 +71,32 @@ function displayBooks(books) {
   });
 }
 
+
+// Pagination 
+
+function setupPagination(){
+   previous = document.getElementById('previous');
+   current = document.getElementById('current');
+   next = document.getElementById('next');
+
+   if (page < 2){
+     previous.disabled = true;
+     previous.classList.remove('bg-sky-400', 'hover:bg-sky-500')
+     previous.classList.add('bg-gray-400', 'text-black')
+   }
+
+   previous.addEventListener("click", function () {
+     console.log("previous")
+   });
+
+   next.addEventListener("click", function () {
+    console.log("next")
+  });
+
+   current.innerText = page;
+}
+
+setupPagination()
+
 // Call the function to fetch and display books
-fetchBooks();
+fetchBooks(page);
