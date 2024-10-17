@@ -75,25 +75,28 @@ function displayBooks(books) {
 // Pagination 
 
 function setupPagination(){
+  console.log("--->", page)
    previous = document.getElementById('previous');
    current = document.getElementById('current');
    next = document.getElementById('next');
 
-   if (page < 2){
-     previous.disabled = true;
-     previous.classList.remove('bg-sky-400', 'hover:bg-sky-500')
-     previous.classList.add('bg-gray-400', 'text-black')
-   }
+   
 
    previous.addEventListener("click", function () {
-     console.log("previous")
+    if (page > 1){
+      page = page - 1;
+      current.innerText = page;
+      console.log('previous', page);
+      fetchBooks(page);
+    }
    });
 
    next.addEventListener("click", function () {
-    console.log("next")
+    page = page + 1;
+    console.log('next', page);
+    current.innerText = page;
+    fetchBooks(page);
   });
-
-   current.innerText = page;
 }
 
 setupPagination()
