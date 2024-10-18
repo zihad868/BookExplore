@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script
@@ -17,62 +17,129 @@
   <body class="bg-gray-200">
     <!-- Header Section  -->
     <header>
-      <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between">
-        <div class="flex justify-between items-center ">
+      <nav
+        class="p-5 bg-white shadow md:flex md:items-center md:justify-between"
+      >
+        <div class="flex justify-between items-center">
           <span class="text-2xl font-[Poppins] cursor-pointer flex">
-            <img class="h-8 inline"
-              src="./static/logo.jpg">
-              <span class="ml-2">BookExplore</span>
+            <img class="h-8 inline" src="./static/logo.jpg" />
+            <span class="ml-2">BookExplore</span>
           </span>
-    
+
           <span class="text-3xl cursor-pointer mx-2 md:hidden block">
             <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
           </span>
         </div>
-    
-        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px]  transition-all ease-in duration-500">
+
+        <ul
+          class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+        >
           <li class="mx-4 my-6 md:my-0">
-            <a href="#" class="text-xl hover:text-cyan-500 duration-500">HOME</a>
+            <a href="#" class="text-xl hover:text-cyan-500 duration-500"
+              >HOME</a
+            >
           </li>
           <li class="mx-4 my-6 md:my-0">
-            <a href="#" class="text-xl hover:text-cyan-500 duration-500">ABOUT</a>
+            <a href="#" class="text-xl hover:text-cyan-500 duration-500"
+              >ABOUT</a
+            >
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-
       <!-- Books Card -->
       <section class="min-h-[70vh]">
         <div
           id="books-container"
-          class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-10"
         >
           <!-- Responsive Books Card -->
         </div>
       </section>
 
-
       <!-- Pagination -->
       <section class="paginate">
         <div id="pagination" class="flex justify-center mt-6 space-x-5">
-          <button id="previous" class="bg-sky-400 px-2 py-1 rounded-md text-white font-bold hover:bg-sky-500">Previous</button>
-          <p id="current" class="bg-sky-400 px-3 py-2 rounded-md text-white font-bold">1</p>
-          <button id="next" class="bg-sky-400 px-2 py-1 rounded-md text-white font-bold hover:bg-sky-500">Next</button>
+          <button
+            id="previous"
+            class="bg-sky-400 px-2 py-1 rounded-md text-white font-bold hover:bg-sky-500"
+          >
+            Previous
+          </button>
+          <p
+            id="current"
+            class="bg-sky-400 px-3 py-2 rounded-md text-white font-bold"
+          >
+            1
+          </p>
+          <button
+            id="next"
+            class="bg-sky-400 px-2 py-1 rounded-md text-white font-bold hover:bg-sky-500"
+          >
+            Next
+          </button>
         </div>
       </section>
+
+      <!-- Footer Section  -->
+      <footer class="bg-gray-300 p-5 mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="">
+            <div class="flex text-2xl text-slate-500 font-bold">
+              <img
+                class="h-10 rounded-lg"
+                src="./static/logo.jpg"
+                alt=""
+                srcset=""
+              />
+              <h2 class="ml-2 text-3xl">
+                Book<span class="text-rose-400">Explore</span>
+              </h2>
+            </div>
+            <p class="w-[11/12] mt-2">
+              We are a technology company committed to helping schools deliver
+              exceptional learning outcomes through innovative and customizable
+              solutions.
+            </p>
+            <div class="flex mt-2">
+              <img class="h-10" src="./static/twitter.png" alt="" />
+              <img class="h-10 ml-7" src="./static/linkedIn.png" alt="" />
+              <img class="h-10 ml-7" src="./static/faceBook.png" alt="" />
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="space-y-2">
+              <h3 class="text-2xl text-slate-500 font-bold">Contact</h3>
+              <div><span class="text-xl">Address:</span> Green Road, Farmgate Dhaka 1205</div>
+              <div><span class="text-xl">Contact:</span> +88013167..... </div>
+              <div><span class="text-xl">Email:</span> zihad@gmail.com. </div>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div>
+              <h1 class="text-2xl text-slate-500 font-bold mb-6">Download</h1>
+              <div class="mb-2">
+                <div>
+                  <img class="h-12 w-full rounded-lg cursor-pointer" src="./static/playStore.png" alt="">
+                </div>
+              </div>
+              <div>
+                <img class="h-12 rounded-lg w-full cursor-pointer mt-4" src="./static/appleAppStore.jpg" alt="" srcset="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
-
-
-    <!-- Footer Section  -->
-    <footer></footer>
-
 
     <!-- Spinner -->
     <div id="spinner">
       <div id="loading" class="flex justify-center items-center my-10 hidden">
-        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-cyan-500"></div>
+        <div
+          class="animate-spin rounded-full h-16 w-16 border-t-4 border-cyan-500"
+        ></div>
       </div>
     </div>
 
