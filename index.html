@@ -49,11 +49,30 @@
     </header>
 
     <main>
-
       <!-- Search  -->
-      <div class="mt-10 w-[50%] mx-auto">
+      <div
+        class="mt-10 w-[55%] mx-auto bg-blue-400 p-2 rounded md:flex items-center"
+      >
         <div class="">
-          <input class="p-3 w-full rounded-lg relative" type="text" name="" id="search" placeholder="Search...">
+          <input
+            class="p-3 w-full rounded-lg relative"
+            type="text"
+            name=""
+            id="search"
+            placeholder="Search By Book Title"
+          />
+        </div>
+        <div class="ml-[30%] sm:mt-2">
+          <label for="genre">Filter by Genre: </label>
+          <select id="genre" class="p-2">
+            <option value="all">All</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Gothic Fiction">Gothic Fiction</option>
+            <option value="Science Fiction">Science Fiction</option>
+            <option value="Horror">Horror</option>
+            <option value="Literature">Literature</option>
+            <option value="Adventure">Adventure</option>
+          </select>
         </div>
       </div>
 
@@ -95,7 +114,9 @@
       <footer class="bg-gray-300 p-5 mt-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="">
-            <div class="flex text-2xl text-slate-500 font-bold flex justify-center">
+            <div
+              class="flex text-2xl text-slate-500 font-bold flex justify-center"
+            >
               <img
                 class="h-10 rounded-lg"
                 src="./static/logo.jpg"
@@ -119,10 +140,15 @@
           </div>
           <div class="flex justify-center">
             <div class="space-y-2">
-              <h3 class="text-2xl text-slate-500 font-bold flex justify-center">Contact</h3>
-              <div><span class="text-xl">Address:</span> Green Road, Farmgate Dhaka 1205</div>
-              <div><span class="text-xl">Contact:</span> +88013167..... </div>
-              <div><span class="text-xl">Email:</span> zihad@gmail.com. </div>
+              <h3 class="text-2xl text-slate-500 font-bold flex justify-center">
+                Contact
+              </h3>
+              <div>
+                <span class="text-xl">Address:</span> Green Road, Farmgate Dhaka
+                1205
+              </div>
+              <div><span class="text-xl">Contact:</span> +88013167.....</div>
+              <div><span class="text-xl">Email:</span> zihad@gmail.com.</div>
             </div>
           </div>
           <div class="flex justify-center">
@@ -130,11 +156,20 @@
               <h1 class="text-2xl text-slate-500 font-bold mb-6">Download</h1>
               <div class="mb-2 flex justify-center">
                 <div>
-                  <img class="h-12 w-full rounded-lg cursor-pointer" src="./static/playStore.png" alt="">
+                  <img
+                    class="h-12 w-full rounded-lg cursor-pointer"
+                    src="./static/playStore.png"
+                    alt=""
+                  />
                 </div>
               </div>
               <div class="flex justify-center">
-                <img class="h-12 rounded-lg w-full cursor-pointer mt-4" src="./static/appleAppStore.jpg" alt="" srcset="">
+                <img
+                  class="h-12 rounded-lg w-full cursor-pointer mt-4"
+                  src="./static/appleAppStore.jpg"
+                  alt=""
+                  srcset=""
+                />
               </div>
             </div>
           </div>

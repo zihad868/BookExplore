@@ -110,7 +110,6 @@ setupPagination()
 
 
 
-
 // Search Functionality
 const searchInput = document.getElementById('search');
 
@@ -133,3 +132,29 @@ function filterBooks(searchTerm) {
 }
 
 
+// Dropdown Functionality
+const genreDropdown = document.getElementById('genre');
+
+genreDropdown.addEventListener('change', function() {
+  const selectedGenre = genreDropdown.value;
+  filterBooksByGenre(selectedGenre); 
+});
+
+
+
+function filterBooksByGenre(selectedGenre) {
+  let filteredBooks;
+
+  if (selectedGenre === 'all') {
+    filteredBooks = books;
+  } else {
+    filteredBooks = books.filter(book => 
+      book.bookshelves.some(genre => genre.includes(selectedGenre))
+    );
+  }
+  
+  
+  const booksContainer = document.getElementById('books-container');
+  booksContainer.innerHTML = '';
+  displayBooks(filteredBooks); 
+}
