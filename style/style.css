@@ -8,3 +8,11 @@
     margin-top: 20px;
 }
 
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+    right: 2%;
+}
