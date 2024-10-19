@@ -15,11 +15,10 @@ function Menu(e) {
     }
   }
   
-
+// Store Books
+books = []
  
 // Fetch Books API
-
-
 let page = 1;
 
 function fetchBooks(page) {
@@ -38,6 +37,7 @@ function fetchBooks(page) {
       return response.json();
     })
     .then(data => {
+      books = data.results;
       displayBooks(data.results);
     })
     .catch(error => {
@@ -75,6 +75,9 @@ function displayBooks(books) {
   });
 }
 
+// Call the function to fetch and display books
+fetchBooks(page);
+
 
 // Pagination 
 
@@ -105,5 +108,28 @@ function setupPagination(){
 
 setupPagination()
 
-// Call the function to fetch and display books
-fetchBooks(page);
+
+
+
+// Search Functionality
+const searchInput = document.getElementById('search');
+
+searchInput.addEventListener('input', function (e) {
+    const searchTerm = e.target.value.toLowerCase();
+    filterBooks(searchTerm);
+})
+
+
+function filterBooks(searchTerm) {
+  const filteredBooks = books.filter(book => 
+     book.title.toLowerCase().includes(searchTerm)
+  );
+
+  const booksContainer = document.getElementById('books-container');
+  booksContainer.innerHTML = ''
+  
+  console.log(filteredBooks)
+  displayBooks(filteredBooks); 
+}
+
+
