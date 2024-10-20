@@ -35,12 +35,12 @@
           class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
         >
           <li class="mx-4 my-6 md:my-0">
-            <a href="" class="text-xl hover:text-cyan-500 duration-500"
+            <a href="./index.html" class="text-xl hover:text-cyan-500 duration-500"
               >HOME</a
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
-            <a href="./wishList.html" class="text-xl hover:text-cyan-500 duration-500"
+            <a href="" class="text-xl hover:text-cyan-500 duration-500"
               >Wishlist</a
             >
           </li>
@@ -50,65 +50,20 @@
 
     <main>
       <!-- Search  -->
-      <div
-        class="mt-10 w-[55%] mx-auto bg-blue-400 p-2 rounded md:flex items-center"
-      >
-        <div class="">
-          <input
-            class="p-3 w-full rounded-lg relative"
-            type="text"
-            name=""
-            id="search"
-            placeholder="Search By Book Title"
-          />
-        </div>
-        <div class="ml-[30%] sm:mt-2">
-          <label for="genre">Filter by Genre: </label>
-          <select id="genre" class="p-2">
-            <option value="all">All</option>
-            <option value="Fiction">Fiction</option>
-            <option value="Gothic Fiction">Gothic Fiction</option>
-            <option value="Science Fiction">Science Fiction</option>
-            <option value="Horror">Horror</option>
-            <option value="Literature">Literature</option>
-            <option value="Adventure">Adventure</option>
-          </select>
-        </div>
-      </div>
 
       <!-- Books Card -->
       <section class="min-h-[70vh]">
+        <div>
+            <h2 class="flex justify-center mt-5 text-2xl font-bold text-sky-500">Wish Book</h2>
+        </div>
         <div
-          id="books-container"
+          id="wishlist-container"
           class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 m-16"
         >
           <!-- Responsive Books Card -->
         </div>
       </section>
 
-      <!-- Pagination -->
-      <section class="paginate">
-        <div id="pagination" class="flex justify-center mt-6 space-x-5">
-          <button
-            id="previous"
-            class="bg-sky-400 px-2 py-1 rounded-md text-white font-bold hover:bg-sky-500"
-          >
-            Previous
-          </button>
-          <p
-            id="current"
-            class="bg-sky-400 px-3 py-2 rounded-md text-white font-bold"
-          >
-            1
-          </p>
-          <button
-            id="next"
-            class="bg-sky-400 px-2 py-1 rounded-md text-white font-bold hover:bg-sky-500"
-          >
-            Next
-          </button>
-        </div>
-      </section>
 
       <!-- Footer Section  -->
       <footer class="bg-gray-300 p-5 mt-12">
@@ -186,6 +141,6 @@
       </div>
     </div>
 
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/wishList.js"></script>
   </body>
 </html>
