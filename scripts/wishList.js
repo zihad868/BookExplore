@@ -1,3 +1,18 @@
+function Menu(e) {
+    let list = document.querySelector('ul');
+    if (e.name === 'menu') {
+      e.name = 'close';  
+      list.classList.add('top-[80px]');
+      list.classList.add('opacity-100');
+      list.classList.add('z-50')
+    } else {
+      e.name = 'menu';   
+      list.classList.remove('top-[80px]');
+      list.classList.remove('opacity-100');
+      list.classList.remove('z-50'); 
+    }
+  }
+
 function getWishlist() {
     const wishlist = localStorage.getItem('wish-list');
     return wishlist ? JSON.parse(wishlist) : [];
