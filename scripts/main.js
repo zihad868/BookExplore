@@ -67,7 +67,7 @@ function displayBooks(books) {
             <p class="text-gray-700 mb-2">By: ${book.authors.map(author => author.name).join(', ')}</p>
             <p class="text-gray-700 mb-2">Genre: ${book.bookshelves.join(', ')}</p>
             <div class="flex justify-between">
-               <a href="${book.formats['text/html']}" class="text-cyan-500 hover:text-cyan-600 font-semibold">Read More</a>
+            <a href="../book.html?id=${book.id}" class="text-cyan-500 hover:text-cyan-600 font-semibold">Read More</a>
               <!-- Wishlist Icon -->
               <span class="wishlist-icon cursor-pointer" onclick="wishList(${book.id})">
                  <ion-icon name="heart-outline" id="wishlist-icon-${book.id}"></ion-icon>

@@ -44,19 +44,19 @@ function getWishlist() {
         const book = await response.json();
 
         const bookCard = `
-          <div class='transition hover:border-1 hover:scale-105'>
-            <div class="bg-white shadow-md rounded-lg p-4">
-              <img src="${book.formats['image/jpeg']}" alt="${book.title}" class="w-full h-64 object-cover rounded-t-md">
-              <div class="p-4">
-                <h1 class="text-xl font-bold mb-2">ID: ${book.id}</h1>
-                <h2 class="text-xl font-bold mb-2">${book.title}</h2>
-                <p class="text-gray-700 mb-2">By: ${book.authors.map(author => author.name).join(', ')}</p>
-                <p class="text-gray-700 mb-2">Genre: ${book.bookshelves.join(', ')}</p>
-                <a href="${book.formats['text/html']}" class="text-cyan-500 hover:text-cyan-600 font-semibold">Read More</a>
-              </div>
-            </div>
-          </div>
-        `;
+  <div class='transition hover:border-1 hover:scale-105'>
+    <div class="bg-white shadow-md rounded-lg p-4">
+      <img src="${book.formats['image/jpeg']}" alt="${book.title}" class="w-full h-64 object-cover rounded-t-md">
+      <div class="p-4">
+        <h2 class="text-xl font-bold mb-2">${book.title}</h2>
+        <p class="text-gray-700 mb-2">By: ${book.authors.map(author => author.name).join(', ')}</p>
+        <p class="text-gray-700 mb-2">Genre: ${book.bookshelves.join(', ')}</p>
+        <a href="../book.html?id=${book.id}" class="text-cyan-500 hover:text-cyan-600 font-semibold">Read More</a>
+      </div>
+    </div>
+  </div>
+`;
+
         wishlistContainer.innerHTML += bookCard;
       }
     } catch (error) {
